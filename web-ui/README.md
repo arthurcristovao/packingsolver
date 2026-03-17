@@ -7,7 +7,9 @@ Interface para configurar plano de corte com:
 - Rotações permitidas e espelhamento
 - Objetivo e modo de otimização
 - Tipos de corte: `Guillotine`, `Rectangle`, `Nesting`
-- Cadastro de peças retangulares e geometrias 2D aleatórias
+- Cadastro de famílias de peças com **quantidade inteira**
+- Peças **retangulares** e **poligonais aleatórias**, com tamanhos aleatórios por faixa min/max
+- Visualização SVG da organização final para cada algoritmo de corte
 
 ## Rodando
 

@@ -16,26 +16,18 @@ export type OptimizationMode =
   | 'NotAnytimeDeterministic'
   | 'NotAnytimeSequential';
 
-export interface RectPiece {
+export interface PieceConfig {
   id: string;
-  type: 'rectangle';
-  width: number;
-  height: number;
+  label: string;
+  kind: 'rectangle' | 'polygon-random';
   quantity: number;
-  rotatable: boolean;
-}
-
-export interface RandomShapePiece {
-  id: string;
-  type: 'random-shape';
-  vertices: number;
+  minWidth: number;
   maxWidth: number;
+  minHeight: number;
   maxHeight: number;
-  quantity: number;
+  sides: number;
   rotatable: boolean;
 }
-
-export type Piece = RectPiece | RandomShapePiece;
 
 export interface SolverRequest {
   sheet: { width: number; height: number };
@@ -46,7 +38,7 @@ export interface SolverRequest {
   objective: ObjectiveMode;
   optimizationMode: OptimizationMode;
   cuttingType: CuttingType;
-  pieces: Piece[];
+  pieces: PieceConfig[];
 }
 
 export interface SolverResult {
