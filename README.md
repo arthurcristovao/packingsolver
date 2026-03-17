@@ -866,3 +866,8 @@ Visualize:
 ```shell
 python3 scripts/visualize_irregular.py solution_irregular.json
 ```
+
+## Web UI
+
+Existe uma interface Node.js + React + Tailwind em `web-ui/` para configurar cenários e consumir uma ponte WASM para os algoritmos C++.
+
